@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "sass": "sass --watch ./sass/main.scss ./css/main.css"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1",
+        "sass": "^1.32.11"
+    }
+}
