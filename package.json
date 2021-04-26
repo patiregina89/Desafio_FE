@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "sass": "sass --watch ./sass/main.scss ./css/main.css"
+        "sass": "sass --watch ./assets/sass/main.scss ./css/main.css"
     },
     "dependencies": {
         "normalize.css": "^8.0.1",
