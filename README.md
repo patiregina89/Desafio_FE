@@ -1,5 +1,3 @@
 Desafio Front-End
 
-# Requirements:
-
-# Configuration
+Dificuldade para entender a identação do SASS
