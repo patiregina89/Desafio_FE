@@ -1,0 +1,41 @@
+.footer {
+    width: 100%;
+    height: 100%;
+    background-color: $color-background-body;
+    text-align: center;
+    padding: 20px 0;
+
+    
+    &__logo {
+        display: flex;
+        box-sizing: border-box;
+    }
+    
+    &__img-logo {
+        margin: 18px 0 0 14px;
+        width: 110px;
+        height: auto;
+    }
+    
+    &__title {
+        margin: 2px 0 0 17px;
+        font-size: 12px;
+        font-family: $font-family-header;
+        font-weight: 100;
+        color: $color-text;
+        letter-spacing: .12em;
+        opacity: 1;
+        
+        &-span {
+            font-weight: 500;
+        } 
+    }
+
+    &__p {
+        font-family: $font-family-header;
+        font-size: 8px;
+        color: $color-gray;
+        padding-top: 20px;
+        letter-spacing: .1em;
+    }
+}

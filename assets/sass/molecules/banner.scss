@@ -1,0 +1,24 @@
+.banner {
+    margin: 0;
+    padding: 0;
+    height: 640px;
+    width: auto;
+    background-image: url(/images/banner.jpg) ;
+    background-position: center right bottom;
+    background-size: cover;
+
+    &__valores { 
+        height: 640px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        font-family: $font-family-header;
+        font-size: 20px;
+        color: $color-text;
+    }
+
+    &__valores-span {
+        color: $color-background;
+        font-weight: 1000;
+    }
+}
