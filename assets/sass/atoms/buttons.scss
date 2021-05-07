@@ -1,0 +1,15 @@
+.btnMenu_open{
+    display: block;
+    background-image: url(/images/menu.svg);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    text-indent: -9999px;
+    padding: 20px 15px;
+}
+
+.btnMenu_close{
+    $background-color: $color-background;
+    background-image: url(/images/menu.png);
+
+
+}

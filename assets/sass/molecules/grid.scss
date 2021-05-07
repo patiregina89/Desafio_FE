@@ -1,0 +1,57 @@
+img {
+    width: 30%;
+}
+
+.grid {
+    background-color: $color-background-body;
+    width: 100%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    
+    
+    &__card {
+        background-color: $color-background-body;   
+        border-radius: .8em;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 282px;
+        margin: 20px;
+        border: 1px solid $color-gray;
+        
+        &-img {
+            align-items: center;
+            background-color: #efa426;
+            border-top-left-radius: .8em;
+            border-top-right-radius: .8em;
+            display: flex;
+            flex: 2;
+            justify-content: center;
+            border-bottom: 5px solid $color-background;
+            height: 282px;
+            width: auto;
+        }
+
+        &-content {
+            flex: 1.25;
+            padding: 15px;
+        }
+        
+        &-text-placeholder {
+            display: flex;
+            flex-wrap: wrap;
+            font-family: $font-family-header;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: .05em;
+            color: $color-gray;
+        }
+
+    }
+    
+    
+    
+}
