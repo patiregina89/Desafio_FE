@@ -1,5 +1,6 @@
 img {
     width: 30%;
+    padding: 20px;
 }
 
 .grid {
@@ -8,8 +9,12 @@ img {
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: center;
-    justify-items: center;
+
+
+    @media screen and (min-width: 400px){
+        grid-column: 200px 200px;
+        grid-row: 200px 200px;
+    }
     
     
     &__card {
@@ -20,24 +25,46 @@ img {
         width: auto;
         height: 282px;
         margin: 20px;
-        border: 1px solid $color-gray;
-        
-        &-img {
-            align-items: center;
-            background-color: #efa426;
-            border-top-left-radius: .8em;
-            border-top-right-radius: .8em;
-            display: flex;
-            flex: 2;
-            justify-content: center;
-            border-bottom: 5px solid $color-background;
-            height: 282px;
-            width: auto;
+        border: 2px solid $color-gray;
+
+        @media screen and (min-width: 400px) {
+            height: 305px;
+            width: 448px;
         }
 
+        
+        &-img {
+            background-color: $color-card;
+            border-radius: .8em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: flex-end;
+            height: 282px;
+            width: auto;
+            box-shadow: 5px 5px 15px 5px $color-shadow;
+            
+
+            @media screen and (min-width: 400px){
+            }
+        }
+        
         &-content {
-            flex: 1.25;
-            padding: 15px;
+            padding: 10px;
+            width: inherit;
+            height: inherit;
+            background-color: $color-background-body;
+            border-top: 5px solid $color-background;
+            border-bottom-left-radius: .8em;
+            border-bottom-right-radius: .8em;
+            display: flex;
+            align-content: center;
+
+            
+
+            @media screen and (min-width: 400px){
+            }
         }
         
         &-text-placeholder {
@@ -46,10 +73,18 @@ img {
             font-family: $font-family-header;
             font-size: 10px;
             font-weight: 500;
+            line-height: 1.3;
             letter-spacing: .05em;
+            
             color: $color-gray;
-        }
 
+            @media screen and (min-width: 400px){
+                font-size: 14px;
+                font-weight: 400;
+   
+            }
+        }
+        
     }
     
     
