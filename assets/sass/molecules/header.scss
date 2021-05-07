@@ -1,20 +1,33 @@
 .header {
     width: 100%;
-    height: 100%;
+    height: 117px;
     background-color: $color-background;
-    
+
+   
     &__logo {
         display: flex;
         box-sizing: border-box;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 17px;
+        padding: 20px 0;
+
+        @media screen and (min-width: 768px){
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
     }
     
     &__img-logo {
         width: 110px;
         height: auto;
-        padding: 0;
+        padding: 0 14px;
+
+        @media screen and (min-width: 768px){
+            align-items: center;
+            width: 200px;
+            height: auto;
+        }
     }
     
     &__title {
@@ -23,16 +36,31 @@
         font-weight: 100;
         color: $color-font;
         letter-spacing: .1em;
+        padding: 0px 17px;
+        margin: 0;
+
         
         &-span {
             font-weight: 500;
-        }  
+        } 
+
+        @media screen and (min-width: 768px){
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 1024px){
+            font-size: 20px;
+        }
     }
     
     &__img-burguer {
         height: 30px;
         width: 30px;
-        
+
+        @media screen and (min-width: 768px){
+            visibility: collapse; 
+        }
+
     }
     
     &__menu {
@@ -41,9 +69,8 @@
         height: auto;
         visibility: hidden;
 
-        @media screen and (min-width: 400px){
+        @media screen and (min-width: 768px){
             visibility: visible;
-
         }
         
         &-nav{
@@ -52,24 +79,24 @@
         
         &-ul{
             margin: 0;
-            padding: 0;
+            padding: 0px;
             width: 100%;                
             display: flex;
             justify-content: center;
         }
-           
+        
         &-li {
             list-style: none;
             display: inline-block;
             font-family: $font-family-header;
             font-size: $font-size-mobile;
-
+            
             &:hover{
                 color: white;
                 background: $color-background;
-            }
+            }         
         }
-                
+
         &-a {
             display: block;
             align-items: center;
@@ -78,7 +105,20 @@
             font-weight: 100;
             letter-spacing: .15em;
             color: $color-font;
-            padding: 5px;
+
+            @media screen and (min-width: 768px){
+                visibility: visible;
+                font-size: 12px;
+                margin: 10px;
+                padding: 10px;
+
+            }
+
+            @media screen and (min-width: 1024){
+                visibility: visible;
+                font-size: 16px;
+                padding: 20px;
+            }
         }
         
     }
