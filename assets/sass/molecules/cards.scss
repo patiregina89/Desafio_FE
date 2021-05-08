@@ -1,0 +1,75 @@
+
+.cards {
+    background-color: $color-dark-gray;
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 30px;
+    align-content: stretch;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $media-tablet){
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    
+    &__card {
+        background-color: $color-dark-gray;   
+        border-radius: .8em;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        border: 2px solid $color-gray;
+        background-color: $color-yellow;
+        box-shadow: 5px 5px 15px 5px $color-nero;
+        height: 100%;
+        
+        @media screen and (min-width: $media-tablet) {
+            width: 300px;
+            height: auto;
+        }
+
+        @media screen and (min-width: $media-desktop) {
+            width: 500px;
+            height: auto
+        }
+        
+        &__img-wrapper {
+            height: 50px;
+            width: 50px;
+
+        }
+        
+        &__image {
+            width: 30%;
+            height: auto;
+        }
+    }
+        
+    &__card-content {
+        padding: 10px 10px;
+        background-color: $color-dark-gray;
+        border-top: 5px solid $color-blue;
+        border-bottom-left-radius: .8em;
+        border-bottom-right-radius: .8em;
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &__text{
+        display: flex;
+        flex-wrap: wrap;
+        font-family: $font-family-header;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 1.3;
+        letter-spacing: .05em;
+        color: $color-gray;
+
+        @media screen and (min-width: $media-tablet){
+            font-size: 14px;
+            font-weight: 400;
+
+        }
+    }
+}

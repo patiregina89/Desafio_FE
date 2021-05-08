@@ -2,23 +2,44 @@
     margin: 0;
     padding: 0;
     height: 640px;
-    width: auto;
+    width: 100%;
     background-image: url(/images/banner.jpg) ;
     background-position: center right bottom;
     background-size: cover;
 
+    @media screen and (min-width: $media-desktop){
+        background-position: center;
+    }
+
+    
     &__valores { 
         height: 640px;
+        width: auto;
         display: flex;
         justify-content: space-around;
         align-items: flex-end;
         font-family: $font-family-header;
         font-size: 20px;
-        color: $color-text;
+        color: $color-white;
+        
+        @media screen and (min-width: $media-tablet){
+            font-size: 25px;
+            justify-content: flex-end;
+            margin: 0 60px;
+        }
+        
+        @media screen and (min-width: $media-desktop){
+            font-size: 35px;
+            margin: 0 80px;
+        }
     }
 
     &__valores-span {
-        color: $color-background;
+        color: $color-blue;
         font-weight: 1000;
+    }
+
+    &__p {
+        padding-left: 30px;
     }
 }
