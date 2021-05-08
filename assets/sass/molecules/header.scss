@@ -1,29 +1,28 @@
 .header {
     width: 100%;
-    height: 117px;
-    background-color: $color-background;
-
-   
+    height: auto;
+    background-color: $color-blue;
+    
     &__logo {
-        display: flex;
-        box-sizing: border-box;
         justify-content: space-between;
+        padding: 20px 20px 20px 0;
+        display: flex;
         align-items: center;
-        padding: 20px 0;
 
-        @media screen and (min-width: 768px){
+
+        @media screen and (min-width: $media-tablet){
             display: flex;
-            justify-content: center;
             margin: 0;
         }
     }
-    
+
+
     &__img-logo {
         width: 110px;
         height: auto;
         padding: 0 14px;
 
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: $media-tablet){
             align-items: center;
             width: 200px;
             height: auto;
@@ -34,7 +33,7 @@
         font-size: 15px;
         font-family: $font-family-header;
         font-weight: 100;
-        color: $color-font;
+        color: $color-black;
         letter-spacing: .1em;
         padding: 0px 17px;
         margin: 0;
@@ -44,11 +43,11 @@
             font-weight: 500;
         } 
 
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: $media-tablet){
             font-size: 16px;
         }
 
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: $media-desktop){
             font-size: 20px;
         }
     }
@@ -57,29 +56,26 @@
         height: 30px;
         width: 30px;
 
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: $media-tablet){
             visibility: collapse; 
         }
 
     }
     
     &__menu {
-        position: absolute;
         width: 100%;
         height: auto;
-        visibility: hidden;
+        visibility: collapse;
+        background-color: $color-white;
 
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: $media-tablet){
             visibility: visible;
         }
         
-        &-nav{
-            width: 100%;
-        }
         
         &-ul{
             margin: 0;
-            padding: 0px;
+            padding: 0;
             width: 100%;                
             display: flex;
             justify-content: center;
@@ -91,12 +87,11 @@
             font-family: $font-family-header;
             font-size: $font-size-mobile;
             
-            &:hover{
-                color: white;
-                background: $color-background;
+            &:hover {
+                background: $color-blue;
             }         
         }
-
+        
         &-a {
             display: block;
             align-items: center;
@@ -104,20 +99,27 @@
             font-size: 10px;
             font-weight: 100;
             letter-spacing: .15em;
-            color: $color-font;
 
-            @media screen and (min-width: 768px){
+            &:hover {
+                color: $color-white;
+                font-weight: 600;
+
+            }
+            
+            @media screen and (min-width: $media-tablet){
                 visibility: visible;
+                font-weight: 200px;
                 font-size: 12px;
                 margin: 10px;
                 padding: 10px;
+                color: $color-black;
 
             }
-
-            @media screen and (min-width: 1024){
+            
+            @media screen and (min-width: $media-desktop){
                 visibility: visible;
                 font-size: 16px;
-                padding: 20px;
+                padding: 13px;
             }
         }
         

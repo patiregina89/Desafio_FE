@@ -1,0 +1,7 @@
+.container {
+
+    @media screen and (min-width: $media-tablet){
+        max-width: 972px;
+        margin: 0 auto;
+    }
+}
