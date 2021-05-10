@@ -49,25 +49,22 @@
 
     &__h2 {
         visibility: collapse;
-        width: 600px;
+        width: 75%;
         height: auto;
         letter-spacing: 1.2;
         line-height: 1.8;
         padding: 10px;
         font-size: 14px;
-
-
-        @media screen and (min-width: $media-tablet){
-        visibility: visible;
-        color: $color-white;
-        font-family: $font-family-header;
-        font-weight: 100;
-        font-size: 16px;
-        }
+        text-align: center;
 
         @media screen and (min-width: $media-desktop){
+            visibility: visible;
+            color: $color-white;
+            font-family: $font-family-header;
+            font-weight: 100;
             font-size: 18px;
-            }
+            letter-spacing: 1px;
+        }
     }
 
 
@@ -103,6 +100,7 @@
             }
 
         }
+        
         &-title2 {
             color: $color-white;
             font-family: $font-family-header;
@@ -121,6 +119,7 @@
     
             @media screen and (min-width: $media-desktop){
                 font-size: 40px;
+
             }
         }
     }
@@ -129,23 +128,25 @@
         color:$color-light-gray;
         font-family: $font-family-header;
         font-weight: 100;
-        text-align: center;
+        font-size: 18px;
         letter-spacing: .9px;
         opacity: 1;
-        font-size: 14px;
         padding-bottom: 10px;
-
-        @media screen and (min-width: $media-tablet){
-            font-size: 16px;
-
-        }
-
-        @media screen and (min-width: $media-desktop){
-            font-size: 18px;
+        text-align: center;
+        margin:30px;
         
+        @media screen and (min-width: $media-tablet){
+            font-size: 20px;
+            
+        }
+        
+        @media screen and (min-width: $media-desktop){
+            font-size: 22px;
+            margin: 5% 10%;
+            
         }
     }
-
+    
     &__span {
         color: $color-blue;
         font-weight: 1000;
