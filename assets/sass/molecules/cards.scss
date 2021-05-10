@@ -1,3 +1,8 @@
+.cards article:nth-child(2n){
+    @media screen and (min-width: $media-desktop) {
+        transform: translateY(30%);
+    }
+}
 
 .cards {
     background-color: $color-dark-gray;
@@ -6,44 +11,54 @@
     display: grid;
     gap: 30px;
     align-content: stretch;
-    margin-bottom: 20px;
+    justify-content: center;
+    align-content: center;
+    margin: 30px auto;
 
-    @media screen and (min-width: $media-tablet){
+
+    @media screen and (min-width: $media-tablet) {
         grid-template-columns: 1fr 1fr;
+        width: auto;
+        margin: 70px auto 150px auto;
     }
-    
+
+    @media screen and (min-width: $media-desktop) {
+        width: 1000px;
+        height: auto;
+        gap: 70px;
+    }
     
     &__card {
         background-color: $color-dark-gray;   
         border-radius: .8em;
         display: flex;
         flex-direction: column;
-        margin-bottom: 30px;
         border: 2px solid $color-gray;
         background-color: $color-yellow;
         box-shadow: 5px 5px 15px 5px $color-nero;
         height: 100%;
+        width: auto;
+        max-width: 100%;
+        margin: 0 20px;
         
         @media screen and (min-width: $media-tablet) {
-            width: 300px;
             height: auto;
+            gap: 20px;
+            justify-content: center;
         }
+    }
 
-        @media screen and (min-width: $media-desktop) {
-            width: 500px;
-            height: auto
-        }
-        
-        &__img-wrapper {
-            height: 50px;
-            width: 50px;
+    &__img-wrapper {
+        align-items: center;
+        display: flex;
+    }
 
-        }
-        
-        &__image {
-            width: 30%;
-            height: auto;
-        }
+    &__image {
+        height: 150px;
+        width: auto;
+        max-width: 100%;
+        object-fit: cover;
+        margin: 20px auto;
     }
         
     &__card-content {
@@ -69,7 +84,11 @@
         @media screen and (min-width: $media-tablet){
             font-size: 14px;
             font-weight: 400;
-
+        }
+        
+        strong {
+            color: $color-white;
+            font-weight: 500;
         }
     }
 }
